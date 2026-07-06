@@ -14,8 +14,6 @@ RUN echo "@biancaichim:registry=https://npm.pkg.github.com" > /app/.npmrc && \
 
 RUN npm i --yes
 
-RUN npm i --yes
-
 RUN rm -f /app/.npmrc
 
 EXPOSE 3000
