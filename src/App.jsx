@@ -1,9 +1,16 @@
 import './App.css';
+import {add, divide, multiply, subtract} from '@biancaichim/lesson8'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <input id="num1" />
+        <input id="num2" />
+        <button onClick={ ()=> alert(multiply(document.getElementById('num1').value, document.getElementById('num2').value))}>Multiply</button>
+        <button onClick={ ()=> alert(divide(documentt.getElementById('num1').value, document.getElementById('num2').value))}>Divide</button>
+        <button onClick={ ()=> alert(add(documentent.getElementById('num1').value, document.getElementById('num2').value))}>Add</button>
+        <button onClick={ ()=> alert(subtract(documentetElementById('num1').value, document.getElementById('num2').value))}>Subtract</button>
         <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
           GitHub Codespaces <span className="heart">♥️</span> React
