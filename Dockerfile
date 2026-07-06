@@ -9,7 +9,10 @@ WORKDIR /app
 
 COPY . /app
 
-RUN echo "//npm.pkg.github.com/:_authToken="'"'${NODE_AUTH_TOKEN}'"' > /app/.npmrc
+RUN echo "@biancaichim:registry=https://npm.pkg.github.com" > /app/.npmrc && \
+    echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> /app/.npmrc
+
+RUN npm i --yes
 
 RUN npm i --yes
 
